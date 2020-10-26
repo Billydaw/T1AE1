@@ -5,4 +5,5 @@ Vagrant.configure("2") do |config|
   config.vm.hostname = "web-dev"
   config.vm.box_url = "?-minimal"
   config.vm.provision "shell", path: "aprovisionamiento.sh"
+  config.vm.network "forwarded_port", guest: 80, host: 8000, id: "nginx"
 end
