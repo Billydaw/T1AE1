@@ -4,3 +4,4 @@ service nginx start
 sudo cp -avr /usr/share/nginx/www /vagrant/www
 sudo rm -r /usr/share/nginx/www
 sudo ln  -s /vagrant/www /usr/share/nginx/www
+sudo cp /etc/nginx/sites-enabled/default /vagrant/sites-enabled
