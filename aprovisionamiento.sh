@@ -1,7 +1,8 @@
 apt-get -y update
 apt-get install -y nginx
+cp -avr /usr/share/nginx/www/ /vagrant/www
+rm -rf /etc/nginx/sites-enabled
+cp -R /vagrant/sites-enabled /etc/nginx/sites-enabled
+rm -rf /usr/share/nginx/www
+
 service nginx start
-sudo cp -avr /usr/share/nginx/www /vagrant/www
-sudo rm -r /usr/share/nginx/www
-sudo ln  -s /vagrant/www /usr/share/nginx/www
-sudo cp /etc/nginx/sites-enabled/default /vagrant/sites-enabled
